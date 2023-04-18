@@ -5,7 +5,6 @@ public class Auto {
 	private String rekno, merkki, malli;
 	public Auto() {
 		
-		
 	}
 	public Auto(int id, int vuosi, String rekno, String merkki, String malli) {
 		this.id = id;
@@ -48,7 +47,6 @@ public class Auto {
 	public String toString() {
 		return "Auto [id=" + id + ", vuosi=" + vuosi + ", rekno=" + rekno + ", merkki=" + merkki + ", malli=" + malli
 				+ "]";
-	}
-	
-	
+	}	
 }
+

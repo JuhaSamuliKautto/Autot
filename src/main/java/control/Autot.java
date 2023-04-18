@@ -15,16 +15,21 @@ import com.google.gson.Gson;
 import model.Auto;
 import model.dao.Dao;
 
+
 @WebServlet("/autot/*")
 public class Autot extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-   
+       
+    
     public Autot() {
-    	System.out.println("Autot.Autot()");
+        System.out.println("Autot.Autot()");        
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Autot.doGet()");
+		String hakusana = request.getParameter("hakusana");
+		System.out.println(hakusana);
 		Dao dao = new Dao();
 		ArrayList<Auto> autot = dao.getAllItems();
 		String strJSON = new Gson().toJson(autot);
@@ -33,16 +38,21 @@ public class Autot extends HttpServlet {
 		out.println(strJSON);
 	}
 
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Autot.doPost()");
 	}
 
+	
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Autot.doPut()");
+		System.out.println("Autot.doPut()");	
 	}
 
+	
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Autot.doDelete()");
 	}
 
 }
+
+

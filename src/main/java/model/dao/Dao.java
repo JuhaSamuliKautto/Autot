@@ -20,7 +20,7 @@ public class Dao {
 		Connection con = null;
 		String path = System.getProperty("catalina.base");
 		path = path.substring(0, path.indexOf(".metadata")).replace("\\", "/"); // Eclipsessa
-		//System.out.println(path); //Tästä näet mihin kansioon laitat tietokanta-tiedostosi
+		// System.out.println(path); //Tästä näet mihin kansioon laitat tietokanta-tiedostosi
 		// path += "/webapps/"; //Tuotannossa. Laita tietokanta webapps-kansioon
 		String url = "jdbc:sqlite:" + path + db;
 		try {
@@ -119,5 +119,6 @@ public class Dao {
 		return autot;
 	}
 }
+
 
 

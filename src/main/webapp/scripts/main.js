@@ -1,5 +1,6 @@
 //funktio tietojen hakemista varten. Kutsutaan backin GET metodia
 function haeAutot() {
+	
 	let url = "autot?hakusana=" + document.getElementById("hakusana").value; 
 	let requestOptions = {
         method: "GET",
